@@ -20,7 +20,7 @@ Run a container:
 docker run --name reproduce --entrypoint /bin/bash -it ros2:reproduce
 ```
 
-## Launch
+## Launch Mapping Nodes
 
 Inside the container run the following the launch the mapping node(s):
 
@@ -31,7 +31,7 @@ cd ~/ros2_ws/src/ros2_humble_gmapping/slam_gmapping_altered/launch
 ros2 launch pipeline_launch.py
 ```
 
-The node slam_gmapping subscribes to ``sensor_msgs/LaserScan`` on ros2 topic scan. It publishes the `nav_msgs/OccupancyGrid` on ``/map``topic.
+The node slam_gmapping subscribes to ``sensor_msgs/LaserScan`` on ros2 topic scan. It publishes the `nav_msgs/OccupancyGrid` on ``/map`` topic.
 
 You can customize the TF nodes in launch file if needed.
 
