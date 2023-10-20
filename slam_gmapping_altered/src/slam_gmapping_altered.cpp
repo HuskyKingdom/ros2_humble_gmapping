@@ -50,10 +50,6 @@ SlamGmapping::SlamGmapping():
     
 
     init();
-
-    
-    
-    
     startLiveSlam();
 
 
@@ -177,6 +173,11 @@ void SlamGmapping::handleMapResetService(
     map_.info.width = 0;
     map_.info.height = 0;
     map_mutex_.unlock();
+
+
+    delete gsp_;
+    delete gsp_laser_;
+    delete gsp_odom_;
 
     init();
 
