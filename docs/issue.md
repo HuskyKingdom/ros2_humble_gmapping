@@ -40,12 +40,23 @@ Map Meta Data and Entropy is published on ``map_metadata`` and ``entropy`` respe
 The node starts a server ``/map_clear_serve`` which takes requests in type ``std_srvs/srv/Empty`` and response with the same tyoe. Once this server was called, the node will clear the current map and build a new one.
 
 
-### About
+### Replay Simulation ROS bag Data
+
+Open an new terminal from the same container, and run the following:
+
+```
+cd ~/ros2_ws/src/ros2_humble_gmapping/bag_files
+ros2 bag play isaac_simulation
+```
+
+Now the data should be replayed, observed memory leaking in my experiments.
+
+### Monitoring Memeory
+
+```
+watch -n 1 'free -h'
+```
 
 
-<a href="https://yhscode.com">Contact me at: <strong>me@yhscode.com</strong></a>
 
-<a href="https://yhscode.com"><strong>View my full bio.</strong></a>
-    <br />
-    <br />
-  </p>
+
