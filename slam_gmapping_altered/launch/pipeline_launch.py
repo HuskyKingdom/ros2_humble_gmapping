@@ -9,9 +9,6 @@ from ament_index_python.packages import get_package_share_directory
 def generate_launch_description():
 
     use_sim_time = launch.substitutions.LaunchConfiguration('use_sim_time', default='true')
-    slam_dir = get_package_share_directory('slam_toolbox')
-    nav2_dir = get_package_share_directory('nav2_bringup')
-
 
     return LaunchDescription([
 
